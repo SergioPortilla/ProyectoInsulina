@@ -14,14 +14,14 @@ export const InputStyle = styled.input<{ width?: string; height?: string }>`
   }
 
   ${(props) =>
-  props.width &&
-  `
+    props.width &&
+    `
         width: ${props.width}
     `};
 
   ${(props) =>
-  props.height &&
-  `
+    props.height &&
+    `
         height: ${props.height}
     `};
 

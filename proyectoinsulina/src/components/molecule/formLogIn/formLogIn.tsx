@@ -41,19 +41,18 @@ const FormLogIn: FC<FormLoginData> = (props) => {
           <DivContainer>
             <DivTitlePortal>Portal de Usuario</DivTitlePortal>
             <DivPortalInfo>
-              <ImgLogin src={img4} alt="marca insulap blanca"/>
+              <ImgLogin src={img4} alt="marca insulap blanca" />
               <InfoLoginP>Expertos en salud corporal y ambiental Una marca 100% Colombiana.</InfoLoginP>
             </DivPortalInfo>
           </DivContainer>
-          <ImgPortal src={img3} alt="imagen de inyecciones" rotate={360}/>
+          <ImgPortal src={img3} alt="imagen de inyecciones" rotate={360} />
         </InfoPortal>
 
         <LoginInfo width="911px" height="840px">
           <HelpIcon className="material-symbols-outlined">help</HelpIcon>
           <DivInfoLogin>
             <TitleLogin>Login</TitleLogin>
-            <InputForm className="loginuser" type="text" value={props.userLogged.user} onChange={userChange}
-                       placeholder="Usuario" name="user" autocomplete="" width="640px" height="50px"/>
+            <InputForm className="loginuser" type="text" value={props.userLogged.user} onChange={userChange} placeholder="Usuario" name="user" autocomplete="" width="640px" height="50px" />
 
             <InputForm
               className="loginpassword"
@@ -76,8 +75,8 @@ const FormLogIn: FC<FormLoginData> = (props) => {
         </LoginInfo>
       </Box>
 
-      <BackgroundImage src={img} top="-50px" left="-150px"/>
-      <BackgroundImage src={img2} top="-450px" right="-150px"/>
+      <BackgroundImage src={img} top="-50px" left="-150px" />
+      <BackgroundImage src={img2} top="-450px" right="-150px" />
     </BackgroundOne>
   );
 };

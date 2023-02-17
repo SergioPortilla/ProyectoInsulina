@@ -22,6 +22,6 @@ export class CreateOrder {
     this.state = state;
     this.count = count;
     this.brand = brand;
-    this.date_collected = date_requested;
+    this.date_collected = date_collected;
   }
 }

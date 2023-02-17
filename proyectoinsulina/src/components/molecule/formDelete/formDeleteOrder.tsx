@@ -10,17 +10,12 @@ const DeleteOrderForm: FC<FormDeleteData> = (props) => {
     <div>
       {/* Estandarizar idioma (Todas las palabras en pantalla en español, codigo interno en inglés)*/}
       <LabelForm>Insert the ID you want to delete</LabelForm>
-      <InputForm type="text" value={props.deleteOrder.id}
-                 onChange={(event) => props.setDeleteOrder({...props.deleteOrder, id: event.target.value})}
-                 placeholder="Id" name="id" required/>
+      <InputForm type="text" value={props.deleteOrder.id} onChange={(event) => props.setDeleteOrder({ ...props.deleteOrder, id: event.target.value })} placeholder="Id" name="id" required />
       <LabelForm>State</LabelForm>
-      <InputForm type="text" value={props.deleteOrder.state}
-                 onChange={(event) => props.setDeleteOrder({...props.deleteOrder, state: event.target.value})}
-                 name="state"/>
+      <InputForm type="text" value={props.deleteOrder.state} onChange={(event) => props.setDeleteOrder({ ...props.deleteOrder, state: event.target.value })} name="state" />
       <ButtonForm onClick={props.deleteOrderButton}> Eliminar Orden</ButtonForm>
       {/* Organizar codigo */}
-      <ButtonForm onClick={() => {
-      }}>
+      <ButtonForm onClick={() => {}}>
         <Link to="/Permissions">Go Back!</Link>
       </ButtonForm>
     </div>

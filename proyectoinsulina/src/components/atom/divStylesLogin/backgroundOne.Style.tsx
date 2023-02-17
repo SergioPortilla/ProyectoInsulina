@@ -12,22 +12,22 @@ export const BackgroundImage = styled.img<{ top: string; left?: string; right?: 
   position: fixed;
   z-index: -1;
   width: 70%;
-  //left: ${({left}) => left};
+  //left: ${({ left }) => left};
 
   ${(props) =>
-  props.left &&
-  `
+    props.left &&
+    `
         left: ${props.left}
     `};
   ${(props) =>
-  props.top &&
-  `
+    props.top &&
+    `
         top: ${props.top}
     `};
 
   ${(props) =>
-  props.right &&
-  `
+    props.right &&
+    `
         right: ${props.right}
     `};
 `;
@@ -36,14 +36,14 @@ export const Box = styled.div<{ width: string; height: string }>`
   display: grid;
 
   ${(props) =>
-  props.width &&
-  `
+    props.width &&
+    `
         width: ${props.width}
     `};
 
   ${(props) =>
-  props.height &&
-  `
+    props.height &&
+    `
         height: ${props.height}
     `};
 
@@ -61,14 +61,14 @@ export const Box = styled.div<{ width: string; height: string }>`
 
 export const InfoPortal = styled.div<{ width: string; height: string }>`
   ${(props) =>
-  props.width &&
-  `
+    props.width &&
+    `
         width: ${props.width}
     `};
 
   ${(props) =>
-  props.height &&
-  `
+    props.height &&
+    `
         height: ${props.height}
     `};
   grid-column: 1;
@@ -120,8 +120,8 @@ export const ImgPortal = styled.img<{ rotate: number }>`
   left: 300px;
   top: 370px;
   ${(props) =>
-  props.rotate &&
-  `
+    props.rotate &&
+    `
         transform: rotate(${props.rotate}deg)
     `};
 `;
@@ -130,14 +130,14 @@ export const ImgPortal = styled.img<{ rotate: number }>`
 
 export const LoginInfo = styled.div<{ width: string; height: string }>`
   ${(props) =>
-  props.width &&
-  `
+    props.width &&
+    `
         width: ${props.width}
     `};
 
   ${(props) =>
-  props.height &&
-  `
+    props.height &&
+    `
         height: ${props.height}
     `};
 

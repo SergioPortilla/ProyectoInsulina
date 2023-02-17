@@ -17,12 +17,12 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<LogInPage/>}></Route>
-        <Route path="Permissions" element={<PermissionsVerificationPage/>}></Route>
-        <Route path="getOrders" element={<OrdersPage/>}></Route>
-        <Route path="createOrder" element={<CreateOrderPage/>}></Route>
-        <Route path="UpdateOrder" element={<UpdateOrderPage/>}></Route>
-        <Route path="DeleteOrders" element={<DeleteOrderPage/>}></Route>
+        <Route path="/" element={<LogInPage />}></Route>
+        <Route path="Permissions" element={<PermissionsVerificationPage />}></Route>
+        <Route path="getOrders" element={<OrdersPage />}></Route>
+        <Route path="createOrder" element={<CreateOrderPage />}></Route>
+        <Route path="UpdateOrder" element={<UpdateOrderPage />}></Route>
+        <Route path="DeleteOrders" element={<DeleteOrderPage />}></Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

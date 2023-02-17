@@ -1,14 +1,7 @@
 import { FC, useState } from 'react';
 import { ButtonForm } from '../../atom/button/buttonForm';
 import { InputForm } from '../../atom/input/inputForm';
-import {
-  BoxPermissions,
-  ImgBack,
-  ImgLogoNav,
-  Linksnavbar,
-  MenuBar,
-  NavBarPermissions
-} from '../../atom/stylesPermissionsPage/stylesPermissions';
+import { BoxPermissions, ImgBack, ImgLogoNav, Linksnavbar, MenuBar, NavBarPermissions } from '../../atom/stylesPermissionsPage/stylesPermissions';
 import { FormNewOrderData } from './formNewOrderData';
 import {
   Botonguardar,
@@ -59,11 +52,10 @@ const FormNewOrder: FC<FormNewOrderData> = (props) => {
         <InfoContainer>
           <TitleInformation>Solicitar recogida de tubos de insulina</TitleInformation>
           <ParrafoInformativo>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit maiores non inventore est eligendi laborum
-            vero, mollitia dolorem aperiam at hic itaque debitis amet sequi nam et tempore
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit maiores non inventore est eligendi laborum vero, mollitia dolorem aperiam at hic itaque debitis amet sequi nam et tempore
             molestias officiis!
-            <br/>
-            <br/>
+            <br />
+            <br />
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dolor dignissimos aliquid commodi nesciunt
           </ParrafoInformativo>
         </InfoContainer>
@@ -71,7 +63,7 @@ const FormNewOrder: FC<FormNewOrderData> = (props) => {
 
       <ColumnCreativeForm>
         <CreativeFormContainer>
-          <Triangle/>
+          <Triangle />
           <Leash>
             <InfoTag>Ref 3345</InfoTag>
           </Leash>
@@ -82,16 +74,12 @@ const FormNewOrder: FC<FormNewOrderData> = (props) => {
               props.orderCreated(values);
             }}
           >
-            {({values: {full_name, dni, cellphone, place, count, brand}, handleSubmit, handleChange}) => (
+            {({ values: { full_name, dni, cellphone, place, count, brand }, handleSubmit, handleChange }) => (
               <>
-                <InputForm type="text" value={full_name} onChange={handleChange} placeholder="Nombre Completo"
-                           name="full_name" width="700px" height="50px" className="creation_form"/>
-                <InputForm type="text" value={dni} onChange={handleChange} placeholder="Dni" name="dni" width="370px"
-                           height="50px" className="creationform"/>
-                <InputForm type="number" value={cellphone} onChange={handleChange} placeholder="Celular"
-                           name="cellphone" width="268px" height="50px" className="creationform"/>
-                <InputForm type="text" value={place} onChange={handleChange} placeholder="Direccion" name="place"
-                           width="700px" height="50px" className="creationform"/>
+                <InputForm type="text" value={full_name} onChange={handleChange} placeholder="Nombre Completo" name="full_name" width="700px" height="50px" className="creation_form" />
+                <InputForm type="text" value={dni} onChange={handleChange} placeholder="Dni" name="dni" width="370px" height="50px" className="creationform" />
+                <InputForm type="number" value={cellphone} onChange={handleChange} placeholder="Celular" name="cellphone" width="268px" height="50px" className="creationform" />
+                <InputForm type="text" value={place} onChange={handleChange} placeholder="Direccion" name="place" width="700px" height="50px" className="creationform" />
                 <TituloCreation>Informacion de Tubos de Insulina</TituloCreation>
                 <InfoInsulines>
                   <Separacion>
@@ -105,8 +93,7 @@ const FormNewOrder: FC<FormNewOrderData> = (props) => {
                   <Separaciondos>
                     <LabelForm className="titulotag">Cantidad de Tubos</LabelForm>
                     <img src={img8} alt="Inyection purple"></img>
-                    <InputForm type="number" value={count} onChange={handleChange} placeholder="Count" name="count"
-                               width="83px" height="50px"/>
+                    <InputForm type="number" value={count} onChange={handleChange} placeholder="Count" name="count" width="83px" height="50px" />
                   </Separaciondos>
                 </InfoInsulines>
                 <Botonguardar>
@@ -120,8 +107,8 @@ const FormNewOrder: FC<FormNewOrderData> = (props) => {
         </CreativeFormContainer>
       </ColumnCreativeForm>
 
-      <ImgToDoCreationPage className="inyecciones" src={img7} alt="insuline-group"/>
-      <ImgBack src={img6} alt="ilustration"/>
+      <ImgToDoCreationPage className="inyecciones" src={img7} alt="insuline-group" />
+      <ImgBack src={img6} alt="ilustration" />
     </BoxPermissions>
   );
 };

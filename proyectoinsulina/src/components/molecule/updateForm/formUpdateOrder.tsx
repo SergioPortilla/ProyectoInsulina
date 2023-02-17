@@ -9,14 +9,12 @@ const FormUpdateOrders: FC<FormUpdateOrder> = (props) => {
   return (
     <div>
       <LabelForm>ID: </LabelForm>
-      <InputForm type="text" value={props.orderUpdated.id}
-                 onChange={(event) => props.setOrderUpdated({...props.orderUpdated, id: event.target.value})}
-                 placeholder="ID" name="id"></InputForm>
+      <InputForm type="text" value={props.orderUpdated.id} onChange={(event) => props.setOrderUpdated({ ...props.orderUpdated, id: event.target.value })} placeholder="ID" name="id"></InputForm>
       <LabelForm>Count: </LabelForm>
       <InputForm
         type="number"
         value={props.orderUpdated.count}
-        onChange={(event) => props.setOrderUpdated({...props.orderUpdated, count: event.target.value})}
+        onChange={(event) => props.setOrderUpdated({ ...props.orderUpdated, count: event.target.value })}
         placeholder="Count"
         name="count"
       ></InputForm>
@@ -24,7 +22,7 @@ const FormUpdateOrders: FC<FormUpdateOrder> = (props) => {
       <InputForm
         type="text"
         value={props.orderUpdated.state}
-        onChange={(event) => props.setOrderUpdated({...props.orderUpdated, state: event.target.value})}
+        onChange={(event) => props.setOrderUpdated({ ...props.orderUpdated, state: event.target.value })}
         placeholder="State"
         name="state"
       ></InputForm>
@@ -32,7 +30,7 @@ const FormUpdateOrders: FC<FormUpdateOrder> = (props) => {
       <InputForm
         type="text"
         value={props.orderUpdated.brand}
-        onChange={(event) => props.setOrderUpdated({...props.orderUpdated, brand: event.target.value})}
+        onChange={(event) => props.setOrderUpdated({ ...props.orderUpdated, brand: event.target.value })}
         placeholder="Brand"
         name="brand"
       ></InputForm>
@@ -51,8 +49,7 @@ const FormUpdateOrders: FC<FormUpdateOrder> = (props) => {
       ></InputForm>
 
       <ButtonForm onClick={props.updateOrderButton}>Update Order</ButtonForm>
-      <ButtonForm onClick={() => {
-      }}>
+      <ButtonForm onClick={() => {}}>
         <Link to="/Permissions">Go Back!</Link>
       </ButtonForm>
     </div>

@@ -29,32 +29,32 @@ export const ImgCard = styled.img<{ rotate: number; left?: string; right?: strin
   height: 150px;
   position: absolute;
   ${(props) =>
-  props.rotate &&
-  `
+    props.rotate &&
+    `
         transform: rotate(${props.rotate}deg)
     `};
 
   ${(props) =>
-  props.left &&
-  `
+    props.left &&
+    `
         left: ${props.left}
     `};
 
   ${(props) =>
-  props.top &&
-  `
+    props.top &&
+    `
         top: ${props.top}
     `};
 
   ${(props) =>
-  props.right &&
-  `
+    props.right &&
+    `
         right: ${props.right}
     `};
 
   ${(props) =>
-  props.bottom &&
-  `
+    props.bottom &&
+    `
         bottom: ${props.bottom}
     `};
 `;

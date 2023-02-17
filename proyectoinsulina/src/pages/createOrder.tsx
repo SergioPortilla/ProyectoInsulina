@@ -5,7 +5,7 @@ import { CreateOrders } from '../services/insulineServices';
 import decodeToken from '../services/decodeToken';
 
 function CreateOrderPage() {
-  const {localValue} = decodeToken();
+  const { localValue } = decodeToken();
 
   const [newOrder, setNewOrder] = useState(new CreateOrder('', '', 0, '', '', '', 'CREATED', 0, '', ''));
 
@@ -20,7 +20,7 @@ function CreateOrderPage() {
   };
 
   // Etiquetas vacias no necesarias
-  return <FormNewOrder newOrder={newOrder} setNewOrder={setNewOrder} orderCreated={orderCreated}/>;
+  return <FormNewOrder newOrder={newOrder} setNewOrder={setNewOrder} orderCreated={orderCreated} />;
 }
 
 export default CreateOrderPage;

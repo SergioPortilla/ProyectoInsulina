@@ -6,7 +6,7 @@ import decodeToken from '../services/decodeToken';
 
 // Algunas paginas como const y otras como function, estandarizar
 function DeleteOrderPage() {
-  const {localValue} = decodeToken();
+  const { localValue } = decodeToken();
 
   // Puntos y comas
   const [deleteOrders, setDeleteOrders] = useState(new CreateOrder('', '', 0, '', '', '', 'DELETED', 0, '', ''));
@@ -22,8 +22,7 @@ function DeleteOrderPage() {
     }
   };
 
-  return <DeleteOrderForm deleteOrder={deleteOrders} setDeleteOrder={setDeleteOrders}
-                          deleteOrderButton={deleteOrderPermission}/>;
+  return <DeleteOrderForm deleteOrder={deleteOrders} setDeleteOrder={setDeleteOrders} deleteOrderButton={deleteOrderPermission} />;
 }
 
 export default DeleteOrderPage;

@@ -22,16 +22,16 @@
     "jsx": "react-jsx",
     "paths": {
       "@atom/*": [
-        "src/components/atom/*"
+        "./src/components/atom/*"
       ],
       "@molecule/*": [
-        "src/components/molecule/*"
+        "./src/components/molecule/*"
       ],
       "@pages/*": [
-        "src/pages/*"
+        "./src/pages/*"
       ],
       "@services/*": [
-        "src/services/*"
+        "./src/services/*"
       ]
     }
   },

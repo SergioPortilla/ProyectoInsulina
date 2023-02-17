@@ -33,8 +33,8 @@ export const StatusComponent = styled.div<{ background: string }>`
   align-items: center;
   justify-content: center;
   ${(props) =>
-  props.background &&
-  `
+    props.background &&
+    `
         background-color: ${props.background}
     `};
 `;

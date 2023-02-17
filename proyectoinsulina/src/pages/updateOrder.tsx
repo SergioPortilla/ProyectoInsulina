@@ -11,7 +11,7 @@ import FormUpdateOrders from '../components/molecule/updateForm/formUpdateOrder'
 // Estandarización de identado
 function UpdateOrderPage() {
   const [orderUpdated, setOrderUpdated] = useState(new CreateOrder('', '', 0, '', '', '', 'CREATED', 0, ''));
-  const {localValue} = decodeToken();
+  const { localValue } = decodeToken();
 
   // Esta función retorna un void por lo cual el codigo html nisiquiera lo lee
   const updateOrder = async () => {
@@ -31,8 +31,7 @@ function UpdateOrderPage() {
     // }
   };
 
-  return <FormUpdateOrders orderUpdated={orderUpdated} setOrderUpdated={setOrderUpdated}
-                           updateOrderButton={updateOrder}/>;
+  return <FormUpdateOrders orderUpdated={orderUpdated} setOrderUpdated={setOrderUpdated} updateOrderButton={updateOrder} />;
 }
 
 export default UpdateOrderPage;

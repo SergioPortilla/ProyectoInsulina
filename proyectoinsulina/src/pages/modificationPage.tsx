@@ -36,7 +36,7 @@ import img7 from '../assets/images/ilustrations/background-shape-3.svg';
 
 // Algunas paginas como const y otras como function, estandarizar
 function PermissionsVerificationPage() {
-  const {permissionsValue} = decodeToken();
+  const { permissionsValue } = decodeToken();
 
   return (
     // Mantener el codigo con el mismo orden
@@ -54,14 +54,14 @@ function PermissionsVerificationPage() {
       <InfoUserSection>
         <InfoUserCard>
           <NameUser>Maria Camila Balaguera Smith</NameUser>
-          <UserImageIcon src={img6} alt="Logo de usuario morado"/>
+          <UserImageIcon src={img6} alt="Logo de usuario morado" />
         </InfoUserCard>
         <Connection>
           <LastConnection>
             {/*Tildes*/}
             <BoldTitle>Ultima Conexion:</BoldTitle>
             12/23/2022
-            <br/>
+            <br />
             <BoldTitle>Tipo de Usuario:</BoldTitle>
             Paciente
           </LastConnection>
@@ -131,8 +131,8 @@ function PermissionsVerificationPage() {
         </Link>
       </PermissionsContainer>
 
-      <ImgToDo src={img5} alt="Todo-Image"/>
-      <ImgBack src={img7}/>
+      <ImgToDo src={img5} alt="Todo-Image" />
+      <ImgBack src={img7} />
     </BoxPermissions>
   );
 }

@@ -6,14 +6,7 @@ import { ButtonForm } from '../components/atom/button/buttonForm';
 import Permissions from '../modelsclass/permissions';
 import { InputForm } from '../components/atom/input/inputForm';
 // Evitar que el codigo se extienda tanto hacia la derecha cuando se esta desarrollando
-import {
-  BoxPermissions,
-  ImgBack,
-  ImgLogoNav,
-  Linksnavbar,
-  MenuBar,
-  NavBarPermissions
-} from '../components/atom/stylesPermissionsPage/stylesPermissions';
+import { BoxPermissions, ImgBack, ImgLogoNav, Linksnavbar, MenuBar, NavBarPermissions } from '../components/atom/stylesPermissionsPage/stylesPermissions';
 import {
   ColumnCreativeForm,
   ColumnInformative,
@@ -39,7 +32,7 @@ const OrdersPage = () => {
   const [loading, setLoading] = useState(true);
   const [orderSelected, setOrderSelected] = useState(new CreateOrder('', '', 0, '', '', '', 'CREATED', 0, '', ''));
 
-  const {localValue, permissionsValue} = DecodeToken();
+  const { localValue, permissionsValue } = DecodeToken();
 
   useEffect(() => {
     (async () => {
@@ -93,8 +86,7 @@ const OrdersPage = () => {
         <InfoContainer className="InfoGetOrder">
           {/*Tildess, para el usuario final estos errores q cometemos al escribirnos por whasapo no deben llegar a los usuarios*/}
           <TitleInformation>Gestion de Entregas</TitleInformation>
-          <ParrafoInformativo>Recuerda que la fecha de obtencion sera tenida en cuenta solo cuando el usuario actualice
-            el estado a "Obtenida"</ParrafoInformativo>
+          <ParrafoInformativo>Recuerda que la fecha de obtencion sera tenida en cuenta solo cuando el usuario actualice el estado a "Obtenida"</ParrafoInformativo>
         </InfoContainer>
       </ColumnInformative>
 
@@ -102,91 +94,86 @@ const OrdersPage = () => {
         <CreativeFormContainer className="GetOrderContainer">
           <table>
             <thead>
-            <tr>
-              <TituloUser>Usuario</TituloUser>
-              <TituloUser>Celular</TituloUser>
-              <TituloUser>Dirección</TituloUser>
-              <TituloUser>Cantidad</TituloUser>
-              <TituloUser>Marca</TituloUser>
-              <TituloUser>Estado</TituloUser>
-            </tr>
+              <tr>
+                <TituloUser>Usuario</TituloUser>
+                <TituloUser>Celular</TituloUser>
+                <TituloUser>Dirección</TituloUser>
+                <TituloUser>Cantidad</TituloUser>
+                <TituloUser>Marca</TituloUser>
+                <TituloUser>Estado</TituloUser>
+              </tr>
             </thead>
             <tbody>
-            {orders &&
-              orders.map((order, index) =>
-                indexOrder !== index ? (
-                  <tr key={index}>
-                    {/*Error de HTML, organizarlo bien identado para entender como se comportara*/}
-                    <TituloUser className="OrdersForm">{order.dni}</TituloUser>
-                    <TituloUser className="UserName">{order.full_name}</TituloUser>
+              {orders &&
+                orders.map((order, index) =>
+                  indexOrder !== index ? (
+                    <tr key={index}>
+                      {/*Error de HTML, organizarlo bien identado para entender como se comportara*/}
+                      <TituloUser className="OrdersForm">{order.dni}</TituloUser>
+                      <TituloUser className="UserName">{order.full_name}</TituloUser>
 
-                    <TituloUser className="OrdersForm">{order.cellphone}</TituloUser>
-                    <TituloUser className="OrdersForm">{order.place}</TituloUser>
-                    <TituloUser className="OrdersForm count">{order.count}</TituloUser>
-                    <TituloUser className="OrdersForm brand">{order.brand}</TituloUser>
-                    <TituloUser className="OrdersForm">
-                      <StatusComponent
-                        background={STATES[order.state!].background}>{STATES[order.state!].name}</StatusComponent>
-                    </TituloUser>
-                    <td>
-                      {permissionsValue.includes(Permissions.read) && permissionsValue.includes(Permissions.delete) && (
-                        //  Nombre "Boton" deberia estar en inglés
-                        // Identar mejor el codigo
-                        <ButtonForm className="botonDelete" onClick={() => deleteOrderForm(order.id!)}>
-                          <span className="material-symbols-outlined">delete</span>
-                        </ButtonForm>
-                      )}
-                    </td>
-                    <td>
-                      {permissionsValue.includes(Permissions.read) && permissionsValue.includes(Permissions.update) && (
-                        <ButtonForm className="botonEditar" onClick={() => orderSelectedd(index, order)}>
-                          <span className="material-symbols-outlined">edit</span>
-                        </ButtonForm>
-                      )}
-                    </td>
-                  </tr>
-                ) : (
-                  <tr key={index}>
-                    <td>
-                      <td>{order.dni}</td>
-                      <br/>
-                      <td>{order.full_name}</td>
-                    </td>
-                    <td>{order.cellphone}</td>
-                    <td>{order.place}</td>
-                    <td>
-                      <InputForm className="editionForm" width="78px" height="30px" type="number"
-                                 value={orderSelected.count} onChange={orderSelectedChangeValue} placeholder="Count"
-                                 name="count"/>
-                    </td>
-                    <td>
-                      <InputForm className="editionForm" width="108px" height="30px" type="text"
-                                 value={orderSelected.brand} onChange={orderSelectedChangeValue} placeholder="Brand"
-                                 name="brand"/>
-                    </td>
-                    <td>
-                      <select name="state" onChange={orderSelectedChangeValue} value={orderSelected.state}>
-                        {Object.keys(STATES).map((state) => (
-                          <option value={state}>{STATES[state as ActiveStates].name}</option>
-                        ))}
-                      </select>
-                    </td>
+                      <TituloUser className="OrdersForm">{order.cellphone}</TituloUser>
+                      <TituloUser className="OrdersForm">{order.place}</TituloUser>
+                      <TituloUser className="OrdersForm count">{order.count}</TituloUser>
+                      <TituloUser className="OrdersForm brand">{order.brand}</TituloUser>
+                      <TituloUser className="OrdersForm">
+                        <StatusComponent background={STATES[order.state!].background}>{STATES[order.state!].name}</StatusComponent>
+                      </TituloUser>
+                      <td>
+                        {permissionsValue.includes(Permissions.read) && permissionsValue.includes(Permissions.delete) && (
+                          //  Nombre "Boton" deberia estar en inglés
+                          // Identar mejor el codigo
+                          <ButtonForm className="botonDelete" onClick={() => deleteOrderForm(order.id!)}>
+                            <span className="material-symbols-outlined">delete</span>
+                          </ButtonForm>
+                        )}
+                      </td>
+                      <td>
+                        {permissionsValue.includes(Permissions.read) && permissionsValue.includes(Permissions.update) && (
+                          <ButtonForm className="botonEditar" onClick={() => orderSelectedd(index, order)}>
+                            <span className="material-symbols-outlined">edit</span>
+                          </ButtonForm>
+                        )}
+                      </td>
+                    </tr>
+                  ) : (
+                    <tr key={index}>
+                      <td>
+                        <td>{order.dni}</td>
+                        <br />
+                        <td>{order.full_name}</td>
+                      </td>
+                      <td>{order.cellphone}</td>
+                      <td>{order.place}</td>
+                      <td>
+                        <InputForm className="editionForm" width="78px" height="30px" type="number" value={orderSelected.count} onChange={orderSelectedChangeValue} placeholder="Count" name="count" />
+                      </td>
+                      <td>
+                        <InputForm className="editionForm" width="108px" height="30px" type="text" value={orderSelected.brand} onChange={orderSelectedChangeValue} placeholder="Brand" name="brand" />
+                      </td>
+                      <td>
+                        <select name="state" onChange={orderSelectedChangeValue} value={orderSelected.state}>
+                          {Object.keys(STATES).map((state) => (
+                            <option value={state}>{STATES[state as ActiveStates].name}</option>
+                          ))}
+                        </select>
+                      </td>
 
-                    <td>
-                      {/*Para que esa className?, no se esta usando***/}
-                      <ButtonForm className="botonGuardar" onClick={() => updateOrderForm(orderSelected)}>
-                        <span className="material-symbols-outlined">save</span>
-                      </ButtonForm>
-                    </td>
-                  </tr>
-                )
-              )}
+                      <td>
+                        {/*Para que esa className?, no se esta usando***/}
+                        <ButtonForm className="botonGuardar" onClick={() => updateOrderForm(orderSelected)}>
+                          <span className="material-symbols-outlined">save</span>
+                        </ButtonForm>
+                      </td>
+                    </tr>
+                  )
+                )}
             </tbody>
           </table>
         </CreativeFormContainer>
       </ColumnCreativeForm>
-      <ImgToDoCreationPage className="maproute" src={img} alt="MapRoute"/>
-      <ImgBack src={img7}/>
+      <ImgToDoCreationPage className="maproute" src={img} alt="MapRoute" />
+      <ImgBack src={img7} />
     </BoxPermissions>
   );
 };
