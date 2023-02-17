@@ -1,7 +1,7 @@
-import { ReactNode } from 'react'; 
+import { ReactNode } from 'react';
 
 export interface ButtonFormData {
-    onClick: () => void, 
-    children: ReactNode,
-    className?: string
-};
+  onClick: () => void;
+  children: ReactNode;
+  className?: string;
+}

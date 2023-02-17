@@ -2,27 +2,27 @@ import styled from 'styled-components';
 
 // Esto es un template no un atomo**
 export const TituloUser = styled.th`
-    width: 86px;
-    height: 34px;
-    font-size: 28px;
-    color: var(--grey-normal);
-    padding: 0 25px;
+  width: 86px;
+  height: 34px;
+  font-size: 28px;
+  color: var(--grey-normal);
+  padding: 0 25px;
 
-    &.OrdersForm{
-        font-size: 15px;
-        border-bottom: 1px solid var(--grey-normal) ;
-    };
+  &.OrdersForm {
+    font-size: 15px;
+    border-bottom: 1px solid var(--grey-normal);
+  }
 
-    &.UserName{
-        font-size: 15px;
-    };
+  &.UserName {
+    font-size: 15px;
+  }
 
-    &.count {
-        color: var(--grey-dark);
-        justify-content: start;
-    };
+  &.count {
+    color: var(--grey-dark);
+    justify-content: start;
+  }
 
-    &.brand{
-        color: var(--grey-dark);
-    };
+  &.brand {
+    color: var(--grey-dark);
+  }
 `;

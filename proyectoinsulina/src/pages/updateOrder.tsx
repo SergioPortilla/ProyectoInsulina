@@ -10,36 +10,29 @@ import FormUpdateOrders from '../components/molecule/updateForm/formUpdateOrder'
 
 // Estandarización de identado
 function UpdateOrderPage() {
-    const [orderUpdated, setOrderUpdated] = useState(new CreateOrder('', '', 0, '', '', '', 'CREATED', 0, ''));
-    const {
-        localValue
-    } = decodeToken();
+  const [orderUpdated, setOrderUpdated] = useState(new CreateOrder('', '', 0, '', '', '', 'CREATED', 0, ''));
+  const {localValue} = decodeToken();
 
-    // Esta función retorna un void por lo cual el codigo html nisiquiera lo lee
-    const updateOrder = async () => {
-        await UpdateOrders(localValue!, orderUpdated);
+  // Esta función retorna un void por lo cual el codigo html nisiquiera lo lee
+  const updateOrder = async () => {
+    await UpdateOrders(localValue!, orderUpdated);
 
-        // Este codigo no sirve y nunca se llama, deberia ser eliminado en ese caso
-        // if(userLogin === 200){
-        //   <ConfirSuccess>
-        //     <IconConfirmation src={img} alt='Fail Icon icon'/>
-        //     <InfoConfir>Hubo un problema al modificar la solicitud del usuario {orderUpdated.dni}</InfoConfir>
-        //   </ConfirSuccess>
-        // }else{
-        //   <ConfirFail>
-        //     <IconConfirmation src={img2} alt='Fail Icon icon'/>
-        //     <InfoConfir>Hubo un problema al modificar la solicitud del usuario {orderUpdated.dni}</InfoConfir>
-        //   </ConfirFail>
-        // }
-    }
+    // Este codigo no sirve y nunca se llama, deberia ser eliminado en ese caso
+    // if(userLogin === 200){
+    //   <ConfirSuccess>
+    //     <IconConfirmation src={img} alt='Fail Icon icon'/>
+    //     <InfoConfir>Hubo un problema al modificar la solicitud del usuario {orderUpdated.dni}</InfoConfir>
+    //   </ConfirSuccess>
+    // }else{
+    //   <ConfirFail>
+    //     <IconConfirmation src={img2} alt='Fail Icon icon'/>
+    //     <InfoConfir>Hubo un problema al modificar la solicitud del usuario {orderUpdated.dni}</InfoConfir>
+    //   </ConfirFail>
+    // }
+  };
 
-    return (
-        <FormUpdateOrders
-            orderUpdated={orderUpdated}
-            setOrderUpdated={setOrderUpdated}
-            updateOrderButton={updateOrder}
-        />
-    );
+  return <FormUpdateOrders orderUpdated={orderUpdated} setOrderUpdated={setOrderUpdated}
+                           updateOrderButton={updateOrder}/>;
 }
 
 export default UpdateOrderPage;
