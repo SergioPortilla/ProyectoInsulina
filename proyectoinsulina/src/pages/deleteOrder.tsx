@@ -1,4 +1,4 @@
-import { DeleteOrders } from '../services/insulineServices';
+import { DeleteOrders } from '@services/insulineServices';
 import DeleteOrderForm from '../components/molecule/formDelete/formDeleteOrder';
 import { useState } from 'react';
 import { CreateOrder } from '../modelsclass/createOrder';
