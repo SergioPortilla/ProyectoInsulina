@@ -15,6 +15,7 @@ function DeleteOrderPage() {
   const deleteOrderPermission = async () => {
     const orderToDelete = await DeleteOrders(localValue!, deleteOrders);
     if (orderToDelete === 200) {
+      // Si toda la plataforma esta en español, los alert deberían estar igual
       window.alert("You're deleted correctly the order");
     } else {
       window.alert("The Id doesn't exist");
