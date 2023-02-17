@@ -1,0 +1,36 @@
+import { FC } from 'react';
+import { Link } from 'react-router-dom';
+import { ButtonForm } from '../../atom/button/buttonForm';
+import { InputForm } from '../../atom/input/inputForm';
+import { LabelForm } from '../../atom/label/labelForm';
+import { FormDeleteData } from './formDeleteData';
+import { ActiveStates } from '../../../const/states';
+
+const DeleteOrderForm: FC<FormDeleteData> = (props) => {
+  return (
+    <div>
+      {/* Estandarizar idioma (Todas las palabras en pantalla en español, codigo interno en inglés)*/}
+      <LabelForm>Insert the ID you want to delete</LabelForm>
+      <InputForm type="text" value={props.deleteOrder.id} onChange={(event) => props.setDeleteOrder({ ...props.deleteOrder, id: event.target.value })} placeholder="Id" name="id" required />
+      <LabelForm>State</LabelForm>
+      <InputForm
+        type="text"
+        value={props.deleteOrder.state}
+        onChange={(event) =>
+          props.setDeleteOrder({
+            ...props.deleteOrder,
+            state: event.target.value as ActiveStates
+          })
+        }
+        name="state"
+      />
+      <ButtonForm onClick={props.deleteOrderButton}> Eliminar Orden</ButtonForm>
+      {/* Organizar codigo */}
+      <ButtonForm>
+        <Link to="/Permissions">Go Back!</Link>
+      </ButtonForm>
+    </div>
+  );
+};
+
+export default DeleteOrderForm;
