@@ -54,6 +54,11 @@
       "last 1 safari version"
     ]
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm lint:fix"
+    }
+  },
   "devDependencies": {
     "husky": "^8.0.0",
     "@types/styled-components": "^5.1.25",
